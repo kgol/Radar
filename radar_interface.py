@@ -37,25 +37,26 @@ class App:
         self.dim.pack(side=LEFT)
 
     def color(self):
-        root = Tk()
+        def sel():
+            selection = "You selected the option " + str(var.get())
+            label.config(text = selection)
 
-        Colors =[
-                ("Black","B"),
-                ("White","W"),
-                ("Yellow","Y")
-                ]
+        var = IntVar()
+        R1 = Radiobutton(root, text="Black", variable=var, value=1,
+                  command=sel)
+        R1.pack( anchor = W )
 
-        v = StringVar()
-        v.set("B")
+        R2 = Radiobutton(root, text="White", variable=var, value=2,
+                  command=sel)
+        R2.pack( anchor = W )
 
-        for text, color in Colors:
-            b = Radiobutton(root, text=text, variable=v, value=color)
-            b.pack(anchor=W)
+        R3 = Radiobutton(root, text="Option 3", variable=var, value=3,
+                  command=sel)
+        R3.pack( anchor = W)
 
-        root.mainloop()
-        
-        print("Selected color:"+text)
-        
+        label = Label(root)
+        label.pack()
+   
     def dim(self):
         dialog=Dialog(root)
 
