@@ -1,8 +1,5 @@
 from tkinter import *
 from tkinter import simpledialog
-'''g_color=""
-g_width=800
-g_height=600'''
 class Dialog(simpledialog.Dialog):
     def body(self, master):
         Label(master, text="width:").grid(row=0)
