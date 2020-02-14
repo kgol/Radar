@@ -13,7 +13,7 @@ class Dialog(simpledialog.Dialog):
         self.e2.grid(row=1, column=1)
         return self.e1
     def save(self):
-        accesslist=[str(self.e1.get()),str(self.e2.get())]
+        accesslist=[str(self.e1.get()),str(self.e2.get()),'']
         accessout=open("accesslist.txt",'w')
         for item in accesslist:
             accessout.write(item)
@@ -57,8 +57,8 @@ class Window:
             with open(acces_1) as f:
                 lines = f.read().splitlines()
             print(lines)
-            lines.pop(2)
-            lines.append(color_1)
+            #lines.pop(2)
+            lines[2]=color_1
             print(lines)
             with open(acces_1,'w') as acces:
                 for item in lines:
