@@ -5,9 +5,12 @@ white = (255, 255, 255)
 
 # black
 black = (0, 0, 0)
-
+# yellow
+yellow = (255,255,0)
 # red color
 red = (255, 0, 0)
+# fajny kolor
+fajny = (10,110,110)
 
 # different transparent red degrees
 red1L = (255, 26, 26)
